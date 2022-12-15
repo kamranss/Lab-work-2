@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Labwork3
 {
-    internal class Genre
+    internal enum GenreEnums
     {
+        Action,
+        Detective,
+        Drama,
+        Melodram
     }
 }

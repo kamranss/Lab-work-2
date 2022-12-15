@@ -1,0 +1,15 @@
+C:\Users\kamra\source\repos\Labwork3\Labwork3\bin\Debug\net6.0\Labwork3.exe
+C:\Users\kamra\source\repos\Labwork3\Labwork3\bin\Debug\net6.0\Labwork3.deps.json
+C:\Users\kamra\source\repos\Labwork3\Labwork3\bin\Debug\net6.0\Labwork3.runtimeconfig.json
+C:\Users\kamra\source\repos\Labwork3\Labwork3\bin\Debug\net6.0\Labwork3.dll
+C:\Users\kamra\source\repos\Labwork3\Labwork3\bin\Debug\net6.0\Labwork3.pdb
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\Labwork3.csproj.AssemblyReference.cache
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\Labwork3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\Labwork3.AssemblyInfoInputs.cache
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\Labwork3.AssemblyInfo.cs
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\Labwork3.csproj.CoreCompileInputs.cache
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\Labwork3.dll
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\refint\Labwork3.dll
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\Labwork3.pdb
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\Labwork3.genruntimeconfig.cache
+C:\Users\kamra\source\repos\Labwork3\Labwork3\obj\Debug\net6.0\ref\Labwork3.dll
