@@ -12,12 +12,14 @@ namespace Labwork3
         #region Creating List inside class old version
         //List<Book> Books = new List<Book>();
         #endregion
+        #region Creating List inside Class and initiating it within constructor
         public List<Book> Books { get; set; }
-
         public Library()
         {
             Books = new List<Book>();
         }
+        #endregion
+        #region Filter Book List and retern the books within provided price range
         public List<Book> FilterbyPrice( int a, int b)
         {
             List<Book> BooksForPrice = new List<Book>();
@@ -31,20 +33,22 @@ namespace Labwork3
             }
             return BooksForPrice;
         }
-
-        public List<Book> FilterbyGenre(GenreEnums a)
+        #endregion
+        #region Filter Book List and retern the books according provided Genre 
+        public List<Book> FilterbyGenre(GenreEnums _genre)
         {
             List<Book> BooksForGenre = new List<Book>();
             foreach (Book item in BooksForGenre)
             {
-                if (item.Genre == a)
+                if (item.Genre == _genre)
                 {
                     BooksForGenre.Add(item);
                 }
             }
             return BooksForGenre;
         }
-
+        #endregion
+        #region Find by Book id
         public Book FindBookByNo(int no)
         {
             foreach (Book item in Books)
@@ -56,7 +60,8 @@ namespace Labwork3
             }
             return null;
         }
-
+        #endregion
+        #region Find out whether the mentioned book exist within the list or not
         public bool IsExistBookByNo(int no)
         {
            
@@ -70,19 +75,21 @@ namespace Labwork3
             return false;
           
         }
-
+        #endregion
+        #region Remove Book from the List
         public void RemoveAll(Predicate<Book> function)
         {
-            List<Book> newbokklist = new List<Book>();
-        foreach (var item in newbokklist)
+            List<Book> newbooklist = new List<Book>();
+        foreach (var item in newbooklist)
             {
                 if (function(item))
                 {
-                   newbokklist.Add(item);
+                   newbooklist.Add(item);
                 }
             }
             
         }
+        #endregion
 
     }
 }
