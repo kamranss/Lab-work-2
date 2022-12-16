@@ -43,7 +43,7 @@ List<Book> genrebook = library.FilterbyGenre(GenreEnums.Drama);
 
 foreach (var item in genrebook)
 {
-    Console.Write($"{item.Id} | {item.Name} | {item.Genre} | {item.AutorName} | {item.Price}");
+    Console.WriteLine($"{item.Id} | {item.Name} | {item.Genre} | {item.AutorName} | {item.Price}");
 }
 Console.WriteLine("----------------------------------------------------------------------------");
 #endregion
@@ -52,7 +52,7 @@ Console.WriteLine("-------------------------------------------------------------
 List<Book> booksfilterprice = library.FilterbyPrice(15, 50);
 foreach (var item in booksfilterprice)
 {
-    Console.Write($"{item.Id} | {item.Name} | {item.Genre} | {item.AutorName} | {item.Price}");
+    Console.WriteLine($"{item.Id} | {item.Name} | {item.Genre} | {item.AutorName} | {item.Price}");
 }
 Console.WriteLine("----------------------------------------------------------------------------");
 #endregion
@@ -65,18 +65,16 @@ Console.WriteLine("-------------------------------------------------------------
 
 #region Find book by Id
 Book findbook = library.FindBookByNo(3);
-//foreach (var item in findbook)  ---   Question to ask Book does not contain public numerator
-//{
-//    Console.Write($"{item.Id} | {item.Name} | {item.Genre} | {item.AutorName} | {item.Price}");
-//}
-Console.WriteLine(findbook?.Name);
+
+Console.WriteLine($"{findbook?.Id} | {findbook?.Name} | {findbook?.Genre} | {findbook?.AutorName} | {findbook?.Price}");
 Console.WriteLine("----------------------------------------------------------------------------");
 #endregion
 
+#region Remove Book from list
+List<Book> newlist =  library.RemoveAll(lib => lib.Price == 20);
+foreach (var item in newlist)
+{
+    Console.WriteLine($"{item.Id} | {item.Name} | {item.Genre} | {item.AutorName} | {item.Price}");
+}
+#endregion
 
-library.RemoveAll(lib => lib.Price != 45);
-
-
-Console.WriteLine(library.FilterbyGenre(GenreEnums.Detective));
-Console.WriteLine(library.FindBookByNo(2));
-Console.WriteLine(library.IsExistBookByNo(4));

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Labwork3
 {
-    internal class Book
+    public class Book
     {
         public int Id { get; private set; }
         public string Name { get; set; }
@@ -16,12 +16,19 @@ namespace Labwork3
         static int id_no;
 
         public GenreEnums Genre { get; set; }
-        public Book()
+
+        #region Automatic Id 
+        static Book()
         {
             id_no = 0;
+        }
+        public Book()
+        {
+            id_no++;
             Id = id_no;
         }
-            
+        #endregion
+
 
     }
 }

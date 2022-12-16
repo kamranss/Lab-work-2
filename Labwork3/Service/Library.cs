@@ -77,17 +77,17 @@ namespace Labwork3
         }
         #endregion
         #region Remove Book from the List
-        public void RemoveAll(Predicate<Book> function)
+        public List<Book> RemoveAll(Predicate<Book> function)
         {
             List<Book> newbooklist = new List<Book>();
-        foreach (var item in newbooklist)
+        foreach (var item in Books)
             {
-                if (function(item))
+                if (!function(item))
                 {
                    newbooklist.Add(item);
                 }
             }
-            
+            return newbooklist;
         }
         #endregion
 
