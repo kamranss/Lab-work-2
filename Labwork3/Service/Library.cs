@@ -21,7 +21,7 @@ namespace Labwork3
         public List<Book> FilterbyPrice( int a, int b)
         {
             List<Book> BooksForPrice = new List<Book>();
-            foreach (var item in Books)
+            foreach (Book item in Books)
             {
                 if (item.Price > a && item.Price < b)
                 {
@@ -35,7 +35,7 @@ namespace Labwork3
         public List<Book> FilterbyGenre(GenreEnums a)
         {
             List<Book> BooksForGenre = new List<Book>();
-            foreach (var item in BooksForGenre)
+            foreach (Book item in BooksForGenre)
             {
                 if (item.Genre == a)
                 {
@@ -45,47 +45,43 @@ namespace Labwork3
             return BooksForGenre;
         }
 
-        public List<Book> FindBookByNo(int a)
+        public Book FindBookByNo(int no)
         {
-            List<Book> BooksforNo = new List<Book>();
-            foreach (var item in BooksforNo)
+            foreach (Book item in Books)
             {
-                if (item.Id == a)
+                if (item.Id == no)
                 {
-                    BooksforNo.Add(item);
+                    return item;
                 }
             }
-            return BooksforNo;
+            return null;
         }
 
         public bool IsExistBookByNo(int no)
         {
-            int count = 0;
-            foreach (var item in Books)
-            {
-                
+           
+            foreach (Book item in Books)
+            {               
                 if (item.Id == no)
                 {
-                    count++;
+                    return true;
                 }       
             }
-            if (count > 1)
-            {
-                return true;
-            }
             return false;
+          
         }
 
-        public List<Book> RemoveAll(Predicate<Book> function)
+        public void RemoveAll(Predicate<Book> function)
         {
-        foreach (var item in Books)
+            List<Book> newbokklist = new List<Book>();
+        foreach (var item in newbokklist)
             {
                 if (function(item))
                 {
-                    Books.Remove(item);
+                   newbokklist.Add(item);
                 }
             }
-            return Books;
+            
         }
 
     }

@@ -22,11 +22,12 @@ book3.AutorName = "Zeynal";
 book3.Genre = GenreEnums.Action;
 
 
+
 Library library1 = new Library();
-foreach (var item in library1)
-{
-    Console.WriteLine(library1.RemoveAll(lib => lib.Price != 45));
-}
+
+
+library1.RemoveAll(lib => lib.Price != 45);
+
 Console.WriteLine(library1.FilterbyPrice(15, 50));
 Console.WriteLine(library1.FilterbyGenre(GenreEnums.Detective));
 Console.WriteLine(library1.FindBookByNo(2));
