@@ -3,6 +3,7 @@
 
 using Labwork3;
 
+#region books
 Book book1 = new Book();
 book1.Name = "Alibaba";
 book1.Price = 20;
@@ -15,20 +16,39 @@ book2.Price = 30;
 book2.AutorName = "Kamil";
 book2.Genre = GenreEnums.Detective;
 
-Book book3 = new Book();
-book3.Name = "7 ogul isterem";
-book3.Price = 45;
-book3.AutorName = "Zeynal";
-book3.Genre = GenreEnums.Action;
+Book book4 = new Book();
+book4.Name = "Sehirli xalat";
+book4.Price = 23;
+book4.AutorName = "Orxan";
+book4.Genre = GenreEnums.Action;
 
+Book book5 = new Book();
+book5.Name = "Ismayil";
+book5.Price = 12;
+book5.AutorName = "Eyyub";
+book5.Genre = GenreEnums.Melodram;
+#endregion
 
+#region Adding books to the list
+Library library = new Library();
+library.Books.Add(book1);
+library.Books.Add(book2);
+library.Books.Add(book4);
+library.Books.Add(book5);
+#endregion
+#region Creating List from Book class because our method returns List 
 
-Library library1 = new Library();
+List<Book> genrebook = library.FilterbyGenre(GenreEnums.Drama);
 
+foreach (var item in genrebook)
+{
+    Console.WriteLine();
+}
+#endregion
 
-library1.RemoveAll(lib => lib.Price != 45);
+library.RemoveAll(lib => lib.Price != 45);
 
-Console.WriteLine(library1.FilterbyPrice(15, 50));
-Console.WriteLine(library1.FilterbyGenre(GenreEnums.Detective));
-Console.WriteLine(library1.FindBookByNo(2));
-Console.WriteLine(library1.IsExistBookByNo(4));
+Console.WriteLine(library.FilterbyPrice(15, 50));
+Console.WriteLine(library.FilterbyGenre(GenreEnums.Detective));
+Console.WriteLine(library.FindBookByNo(2));
+Console.WriteLine(library.IsExistBookByNo(4));
